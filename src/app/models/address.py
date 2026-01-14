@@ -1,6 +1,9 @@
-from sqlalchemy.orm import Mapped, mapped_column
-from src.app.core.db.database import Base
 from typing import Optional
+
+from sqlalchemy.orm import Mapped, mapped_column
+
+from src.app.core.db.database import Base
+
 
 class Address(Base):
     __tablename__ = "addresses"

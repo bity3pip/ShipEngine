@@ -4,6 +4,7 @@ from sqlalchemy.future import select
 from src.app.models.address import Address
 from src.app.schemas.address import AddressCreate
 
+
 async def create_address(db: AsyncSession, address_in: AddressCreate):
     db_address = Address(**address_in.model_dump())
     db.add(db_address)

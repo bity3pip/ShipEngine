@@ -1,7 +1,7 @@
-import os
-
 import asyncio
 import logging
+import os
+
 from arq.connections import RedisSettings
 
 logging.basicConfig(level=logging.INFO)

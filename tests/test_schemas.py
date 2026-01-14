@@ -1,6 +1,8 @@
 import pytest
 from pydantic import ValidationError
+
 from src.app.schemas.address import AddressCreate
+
 
 def test_address_schema_valid():
     data = {

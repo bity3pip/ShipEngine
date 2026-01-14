@@ -1,14 +1,12 @@
 from typing import List
 
-from fastapi import APIRouter, Depends, HTTPException
-
-from sqlalchemy.ext.asyncio import AsyncSession
 from arq.connections import ArqRedis
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.app.core.db.database import get_db, get_arq_pool
-from src.app.schemas.address import AddressCreate, AddressRead
 from src.app.crud import address as crud_address
-
+from src.app.schemas.address import AddressCreate, AddressRead
 
 router = APIRouter(prefix="/addresses", tags=["addresses"])
 
