@@ -25,4 +25,5 @@ async def get_db():
 
 async def get_arq_pool():
     redis_host = os.getenv("REDIS_HOST", "redis")
-    return await create_pool(RedisSettings(host=redis_host, port=6379))
+    redis_port = os.getenv("REDIS_PORT", 6379)
+    return await create_pool(RedisSettings(host=redis_host, port=redis_port))
